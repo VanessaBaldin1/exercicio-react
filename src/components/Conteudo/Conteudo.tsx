@@ -1,9 +1,10 @@
 import Artigo from "../Artigo/Artigo";
+import estilos from "./Conteudo.module.css";
 
 export default function Conteudo() {
   return (
-    <main>
-      <section>
+    <main className={estilos.conteudo}>
+      <section className={`${estilos.conteudosection} ${estilos.arredondada} ${estilos.sombra}`}>
         <h2>O Poder do Design: Criatividade que Transforma</h2>
 
         <p>
@@ -16,9 +17,6 @@ export default function Conteudo() {
 
         <Artigo />
 
-        <Artigo />
-
-        <Artigo />
       </section>
     </main>
   );

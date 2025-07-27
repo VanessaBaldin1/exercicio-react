@@ -1,5 +1,4 @@
-import logo from "../assets/logo-react.png";
-import Menu from "../Menu/Menu";
+import logo from "../../assets/logo-react.png";
 import estilos from "../Cabecalho/Cabecalho.module.css";
 
 export default function Cabecalho() {
@@ -10,7 +9,7 @@ export default function Cabecalho() {
       </h1>
       <hr />
 
-      <Menu />
+      
     </header>
   );
 }
