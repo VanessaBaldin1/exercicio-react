@@ -2,12 +2,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cabecalho from "./components/Cabecalho/Cabecalho";
 import Menu from './components/Cabecalho/Menu/Menu';
 import './global.css';
+import Rodape from './components/Rodape/Rodape';
 
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import TiposDesign from './pages/TiposDesign';
 import UXDesign from './pages/UXDesign';
 import Pagina404 from './pages/Pagina404';
+
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
           </Routes>
         </div>
       </div>
+    
+    <Rodape />
     </Router>
   );
 }
