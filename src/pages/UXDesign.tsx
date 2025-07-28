@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function UXDesign() {
+  useEffect(() => {
+    document.title = " UXDesign | Design Fácil";
+  });
+
   return (
     <section>
       <h2>O que faz um UX Designer?</h2>

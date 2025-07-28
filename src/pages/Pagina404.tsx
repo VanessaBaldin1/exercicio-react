@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Pagina404() {
+  useEffect(() => {
+    document.title = " ERRO 404  | Design Fácil";
+  });
+
   return (
     <section>
       <h2>💥 Opa! Você entrou em um universo paralelo...</h2>

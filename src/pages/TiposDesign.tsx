@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function TiposDesign() {
+  useEffect(() => {
+    document.title = "Tipos Design | Design Fácil";
+  });
+
   return (
     <section>
       <h2>Tipos de Design</h2>
