@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Pagina404() {
   return (
     <section>
-      <h1>💥 Opa! Você entrou em um universo paralelo...</h1>
+      <h2>💥 Opa! Você entrou em um universo paralelo...</h2>
       <br />
       <p>
         A página que você está procurando se perdeu no espaço-tempo da internet.
