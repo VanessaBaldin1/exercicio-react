@@ -10,7 +10,7 @@ export default function Sobre() {
       <h2>Sobre a nossa Agência</h2>
 
       <p>
-        Na <strong>Desing Fácil</strong>, acreditamos que o design vai além da
+        Na <strong>Design Fácil</strong>, acreditamos que o design vai além da
         estética — ele é uma ponte entre ideias e experiências memoráveis. Somos
         uma <b>agência de design criativo</b> movida pela curiosidade, paixão e
         propósito.
