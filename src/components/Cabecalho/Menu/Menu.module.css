@@ -3,64 +3,65 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
-  min-width: var(--menu-largura); 
-  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4); 
-  height: 100%; 
-  width: 100%; 
+  min-width: var(--menu-largura);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
 }
 
 .navList {
-  list-style: none; 
+  list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%; 
+  width: 100%;
 }
 
 .navItem {
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem;
 }
 
 .link {
-  color: #EAEAEA; 
+  color: #eaeaea;
   text-decoration: none;
-  font-size: 1.15rem; 
+  font-size: 1.15rem;
   font-weight: 500;
-  transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease; 
-  display: block; 
-  padding: 0.5rem 0; 
-  position: relative; 
+  transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom: 0; 
-  width: 0; 
-  height: 2px; 
-  background-color: #00BFFF; 
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00bfff;
   transition: width 0.3s ease;
 }
 
-.link:hover {
-  color: #00BFFF; 
-  transform: translateX(5px); 
+.link:hover,
+.active {
+  color: #00bfff;
+  transform: translateX(5px);
   font-size: 1.25rem;
 }
 
 .link:hover::after {
-  width: 100%; 
+  width: 100%;
 }
 
 /* O foco se comportará como o hover para todos os links */
 .link:focus {
-  outline: none; 
-  color: #00BFFF; 
-  font-size: 1.25rem; 
-  font-weight: 500; 
-  transform: translateX(5px); 
+  outline: none;
+  color: #00bfff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transform: translateX(5px);
 }
 
 .link:focus::after {
-  width: 100%; 
+  width: 100%;
 }

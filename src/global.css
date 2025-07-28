@@ -1,7 +1,6 @@
-/* Defina a variável CSS para a altura do cabeçalho aqui */
 :root {
-  --cabecalho-altura: 150px; /* Ajuste este valor para a altura exata do seu cabeçalho */
-  --gap-below-header: 30px; /* NOVO: Espaçamento entre o cabeçalho e o main-layout-wrapper */
+  --cabecalho-altura: 150px;
+  --gap-below-header: 30px;
 }
 
 *,
@@ -17,9 +16,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #0F0F0F;
-  color: #EAEAEA;
+  font-family: "Roboto", sans-serif;
+  background-color: #0f0f0f;
+  color: #eaeaea;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -33,59 +32,56 @@ body {
 .main-layout-wrapper {
   display: flex;
   flex: 1;
-  /* NOVO: Ajuste para deslocar o container para baixo, incluindo o gap */
-  margin-top: calc(var(--cabecalho-altura) + var(--gap-below-header)); /* Desloca abaixo do cabeçalho + gap */
-  position: relative; /* Pode ser útil para z-index ou posicionamento futuro */
-  z-index: 1; /* Garante que ele fique abaixo do cabeçalho fixo */
+  margin-top: calc(var(--cabecalho-altura) + var(--gap-below-header));
+  position: relative;
+  z-index: 1;
 
-  /* PROPRIEDADES DE CENTRALIZAÇÃO E ESTILO PARA O BLOCO PRINCIPAL */
   max-width: 1400px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  
+
   border-radius: 20px;
-  overflow: hidden; /* IMPORTANTE: Garante que os filhos respeitem o border-radius */
+  overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(0, 255, 127, 0.2);
-  
-  /* NOVO: Define a altura para preencher o espaço restante */
   height: calc(100vh - var(--cabecalho-altura) - var(--gap-below-header));
 }
 
-/* NOVO: Estilos para os novos containers internos */
+/* Menu e conteúdo principal */
 .menu-content-container {
-  /* Não precisa de muitos estilos aqui, apenas como um wrapper para o Menu */
-  background-color: #1A1A1A; /* Fundo para o container do menu */
-  min-width: 220px; /* Mantém a largura do menu */
-  overflow-y: auto; /* Permite rolagem dentro do menu se ele for muito longo */
-  height: 100%; /* Ocupa a altura total do main-layout-wrapper */
+  background-color: #1a1a1a;
+  min-width: 220px;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .main-page-content-container {
-  flex-grow: 1; /* Ocupa todo o espaço restante */
-  background-color: #0F0F0F; /* Fundo para o container do conteúdo principal */
-  overflow-y: auto; /* Permite rolagem dentro do conteúdo principal */
-  height: 100%; /* Ocupa a altura total do main-layout-wrapper */
-  padding: 2rem; /* Padding interno para o conteúdo */
+  flex-grow: 1;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+  height: 100%;
+  padding: 2rem;
 }
 
-
-/* O resto do global.css permanece o mesmo */
+/* Links */
 a {
-  color: #00BFFF;
+  color: #00bfff;
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-  color: #8A2BE2;
+  color: #8a2be2;
   text-decoration: underline;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: #00FF7F;
+/* Títulos */
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #00ff7f;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -106,8 +102,9 @@ h3 {
   letter-spacing: -0.02em;
 }
 
+/* Rodapé */
 footer {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   color: #a0a0a0;
   padding: 2rem;
   text-align: center;
@@ -116,7 +113,7 @@ footer {
 }
 
 footer p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -124,6 +121,75 @@ footer p {
 .outro-texto {
   text-transform: uppercase;
   font-weight: 600;
-  color: #FFA500;
+  color: #ffa500;
   letter-spacing: 0.1em;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .main-layout-wrapper {
+    width: 95%;
+    margin-top: calc(
+      var(--cabecalho-altura) + 20px
+    ); /* Menor espaço entre o cabeçalho e o conteúdo */
+    height: auto; /* Permite que a altura se ajuste para o conteúdo */
+    padding: 0 1rem; /* Padding reduzido */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 127, 0.6);
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+
+  .menu-content-container {
+    min-width: 200px;
+  }
+
+  .main-page-content-container {
+    padding: 1rem; /* Menos padding para ajustar o conteúdo */
+  }
+}
+
+/* Ajuste para telas muito pequenas (celulares em modo retrato) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu-content-container {
+    min-width: 180px;
+  }
+
+  .main-page-content-container {
+    padding: 0.5rem; /* Ainda menos padding */
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
 }
