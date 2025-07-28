@@ -1,0 +1,22 @@
+.rodape {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.rodape h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.rodape p {
+  color: blue;
+  font-weight: bold;
+  margin: 0.2rem 0;
+}
+
+.rodape b {
+  font-weight: bold;
+}
